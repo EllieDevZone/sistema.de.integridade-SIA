@@ -52,6 +52,4 @@ O Streamlit abrirá a aplicação no navegador. Ela roda localmente no computado
 
 ## Segurança e GitHub
 
-O banco `audit.db` é criado localmente e está no `.gitignore`. Não publique no GitHub bancos contendo evidências ou dados reais.
-
 A linha de base **não é atualizada automaticamente** quando um arquivo muda. Isso é deliberado: uma alteração deve ser detectada antes de qualquer rebaseline.
