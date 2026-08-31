@@ -1,25 +1,57 @@
-# 🎈 Blank app template
+# SI-AIA — Sistema de Auditoria e Integridade de Arquivos
 
-A simple Streamlit app template for you to modify!
+Aplicação local para criar uma linha de base criptográfica de arquivos e verificar posteriormente sua integridade usando **SHA-256**. A interface é feita com **Streamlit** e os registros são armazenados em **SQLite**.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+## Recursos
 
-### How to run it on your own machine
+- Escaneamento recursivo de diretórios
+- Cálculo de hash SHA-256
+- Linha de base persistente em SQLite
+- Detecção de arquivos alterados
+- Detecção de arquivos ausentes/removidos
+- Listagem dos arquivos monitorados
+- Interface web local
+- Interface de terminal original preservada em `main.py`
 
-Prerequisite: install `uv` if you don't already have it.
+## Instalação
 
+Recomendado: Python 3.10+.
+
+```bash
+python -m venv .venv
 ```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
+
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
 ```
 
-1. Sync the dependencies
+Instale as dependências:
 
-   ```
-   $ uv sync
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-2. Run the app
+## Executar a interface
 
-   ```
-   $ uv run streamlit run streamlit_app.py
-   ```
+```bash
+streamlit run app.py
+```
+
+O Streamlit abrirá a aplicação no navegador. Ela roda localmente no computador.
+
+## Fluxo de uso
+
+1. Abra **Escanear diretório**.
+2. Selecione a pasta que deseja monitorar.
+3. Execute o escaneamento para criar a linha de base.
+4. Faça as alterações normalmente.
+5. Abra **Auditar integridade** e execute a auditoria.
+6. Arquivos alterados ou ausentes serão destacados.
+
+## Segurança e GitHub
+
+O banco `audit.db` é criado localmente e está no `.gitignore`. Não publique no GitHub bancos contendo evidências ou dados reais.
+
+A linha de base **não é atualizada automaticamente** quando um arquivo muda. Isso é deliberado: uma alteração deve ser detectada antes de qualquer rebaseline.
