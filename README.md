@@ -1,6 +1,6 @@
-🔐 SI-AIA — Sistema de Auditoria e Integridade de Arquivos
+SI-AIA — Sistema de Auditoria e Integridade de Arquivos
 
-«Um sistema de vigilância para arquivos. 👁️📁»
+«Um sistema de vigilância para arquivos.
 
 O SI-AIA é uma aplicação desenvolvida para monitorar a integridade de arquivos e identificar possíveis alterações dentro de uma pasta.
 
@@ -10,7 +10,7 @@ O projeto foi desenvolvido com foco em aplicações relacionadas à Computação
 
 ---
 
-🤔 Como funciona?
+Como funciona?
 
 Imagine que o sistema tira uma “impressão digital” de cada arquivo da pasta.
 
@@ -30,21 +30,21 @@ Resultado:
 
 ---
 
-🔄 Fluxo do sistema
+ Fluxo do sistema
 
-1️⃣ Escanear o diretório
+ Escanear o diretório
 
 O usuário seleciona uma pasta que deseja monitorar.
 
 O sistema analisa todos os arquivos presentes no diretório e cria uma linha de base de integridade utilizando hashes SHA-256.
 
-📁 Pasta selecionada
+Pasta selecionada
         ↓
-🔍 Escaneamento dos arquivos
+Escaneamento dos arquivos
         ↓
-🔐 Geração dos hashes SHA-256
+Geração dos hashes SHA-256
         ↓
-🗄️ Armazenamento da linha de base
+Armazenamento da linha de base
 
 ---
 
@@ -54,9 +54,9 @@ Após criar a linha de base, os arquivos continuam podendo ser modificados norma
 
 Por exemplo:
 
-- ✏️ Um documento pode ser editado;
-- 🗑️ Um arquivo pode ser removido;
-- 📂 Arquivos podem sofrer alterações.
+- Um documento pode ser editado;
+- Um arquivo pode ser removido;
+- arquivos podem sofrer alterações.
 
 O sistema não bloqueia as modificações.
 
@@ -68,15 +68,15 @@ Ele registra o estado original para que seja possível verificar posteriormente 
 
 Durante uma auditoria, o sistema escaneia novamente os arquivos e compara os hashes atuais com os hashes armazenados na linha de base.
 
-🔐 Hash original
+  Hash original
         VS
-🔐 Hash atual
+  Hash atual
 
 Se houver diferença, o sistema identifica a alteração.
 
 ---
 
-🛠️ Tecnologias utilizadas
+ Tecnologias utilizadas
 
 - 🐍 Python — lógica e processamento do sistema
 - 🗄️ SQLite — armazenamento dos registros e da linha de base
@@ -85,7 +85,7 @@ Se houver diferença, o sistema identifica a alteração.
 
 ---
 
-✨ Funcionalidades
+  Funcionalidades
 
 - 📁 Escaneamento recursivo de diretórios
 - 🔐 Geração de hashes SHA-256
@@ -99,7 +99,7 @@ Se houver diferença, o sistema identifica a alteração.
 
 ---
 
-🚀 Instalação
+ Instalação
 
 É recomendado utilizar Python 3.10 ou superior.
 
@@ -135,7 +135,7 @@ A aplicação será aberta no navegador e funcionará localmente no computador.
 
 ---
 
-🕵️ Aplicações
+Aplicações
 
 Este tipo de sistema pode ser utilizado em contextos como:
 
@@ -148,7 +148,7 @@ Este tipo de sistema pode ser utilizado em contextos como:
 
 ---
 
-🔒 Segurança
+  Segurança
 
 A linha de base não é atualizada automaticamente quando um arquivo sofre uma alteração.
 
@@ -160,7 +160,7 @@ Por isso, o objetivo da auditoria é primeiro identificar e registrar diferença
 
 ---
 
-🎯 Objetivo do projeto
+  Objetivo do projeto
 
 O SI-AIA foi desenvolvido como um projeto prático voltado para o estudo e aplicação de conceitos de:
 
@@ -168,7 +168,7 @@ Python • Cibersegurança • Criptografia • Integridade de Dados • Computa
 
 ---
 
-👩‍💻 Desenvolvido por
+  Desenvolvido por
 
 EllieDevZone
 
